@@ -172,5 +172,4 @@ const age = 20;
  const bool2 = (age < 18) || (name === "김길동");
 
  console.log(`나이가 18세 미만 이거나, 이름이 "김길동"인가? ${bool2}`);
-
 }
