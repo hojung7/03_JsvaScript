@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../01_CSS/123.css">
+</head>
+<body>
+  
+<table class="table">
+  <tr>
+    <td>너비</td>
+    <td><input type="number" id="width">px</td>
+    <td>높이</td>
+    <td><input type="number" id="height">px</td>
+  </tr>
+  <tr>
+    <td>글자크기</td>
+    <td><input type="number" id="fontSize"></td>
+    <td>굵기</td>
+    <td><input type="number" id="bold"></td>
+  </tr>
+  <tr>
+    <td>글자색</td>
+    <td><input type="text" id="color"></td>
+    <td>배경색</td>
+    <td><input type="text" id="backGround"></td>
+  </tr>
+  <tr>
+    <td>가로정렬</td>
+    <td colspan="3" id="mom">
+      <input type="radio" name = "row-align"> 왼쪽
+      <input type="radio" name = "row-align"> 가운데
+      <input type="radio" name = "row-align"> 오른쪽
+    </td>
+  </tr>
+  <tr>
+    <td>세로정렬</td>
+    <td colspan="3" id="mom2">
+      <input type="radio" name = "col-align"> 위
+      <input type="radio" name = "col-align"> 가운데
+      <input type="radio" name = "col-align"> 아래
+    </td>
+  </tr>
+  <tr>
+    <td>출력문자열</td>
+    <td colspan="3"><input type="text" id="string"></td>
+  </tr>
+  <tr>
+    <td colspan="4"><button>출력하기</button></td>
+  </tr>
+</table>
+<div class="box"></div>
+  
+<script src="../js/123.js"></script>
+</body>
+</html>

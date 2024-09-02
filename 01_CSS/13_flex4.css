@@ -1,0 +1,130 @@
+*{
+  /* content + padding + border = width/height */
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+}
+
+div{border: 1px solid black;}
+
+/* 상하 2분할 */
+.container-1{
+  width: 500px;
+  height: 600px;
+  margin: 20px;
+
+}
+
+.container-1 > div{
+  width: 100%; /* 부모 너비와 동일 */
+  height: 50%; /* 부모 너비의 절반 */ 
+}
+
+.container-1 > div:first-child{
+  background-color: crimson;
+
+}
+
+.container-1 > div:last-child{
+  background-color: deeppink;
+}
+
+.container-2{
+  width: 300px;
+  height: 432px;
+}
+
+
+.container-2 > div:first-child{
+  width: 100%;
+  height: 50%;
+  background-color: red;
+}
+.container-2 > div:nth-child(2){
+  width: 100%;
+  height: 30%;
+  background-color: green;
+}
+.container-2 > div:last-child{
+  width: 100%;
+  height: 20%;
+  background-color: blue;
+}
+
+/* 가로 5:5 분할 */
+.container-3{
+  width: 300px;
+  height: 100px;
+
+  /* 내부 요소를 유연하게 배치 */
+  display: flex;
+  flex-direction: row;
+}
+.container-3 > div{
+  width: 50%;
+  height: 100%;
+}
+
+.container-4{
+  width: 600px;
+  height: 100px;
+  margin: 20px;
+
+  display: flex;
+
+    /* flex container 중심깂 :  row*/
+
+  flex-direction: row;
+
+  /* flex container 교차축 정렬 기본값 : stretch 
+    -> 세로 방향으로 item이 쭉 당겨짐 == height : 100%
+  */
+
+  align-items: stretch;
+}
+  /* 안써도 되지만 확실히 하기 위해서 작성  */
+  .container-4 > div { height: 100%;}
+
+/* 1,3,5 너비 10% */
+.container-4 > div:nth-child(2n+1){
+  width: 10%;
+}
+.container-4 > div:nth-child(2n){
+  width: 35%;
+}
+
+/* 田 만들기  */
+.container-5{
+  width: 300px;
+  height: 300px;
+}
+
+/* 부모 높이 50% 짜리 행 */
+.row-50{
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+
+/* 부모 너비의 50%짜리 열 */
+.col-50{
+  height: 100%;
+  width: 50%;
+}
+
+
+/* 방법2. flex-wrap 이용 분할*/
+.flex{ display: flex;}
+.wrap{ flex-wrap: wrap;}
+
+.window{
+  width: 50%;
+  height: 50%;
+}
+
+
+
+
+
